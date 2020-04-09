@@ -228,7 +228,7 @@ module.exports.run = async (bot, message, args, sql) => {
 
                     let ava = new Image;
                     ava.src = buf;
-                    ctx.drawImage(ava, 180, 72, 91, 91);
+                    ctx.drawImage(ava, 155, 68, 90, 90);
 
                     ctx.font = '12px Arial';
                     ctx.fontSize = '12px';
@@ -271,7 +271,6 @@ module.exports.run = async (bot, message, args, sql) => {
                     ctx.fontSize = '32px';
                     ctx.fillStyle = "#FFFFFF";
                     ctx.textAlign = "center";
-                    ctx.fillText(`☆ ${curlikes}`, 197, 198);
                     ctx.font = '32px Arial';
                     ctx.fontSize = '32px';
                     ctx.fillStyle = color;
