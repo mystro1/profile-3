@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args, sql) => {
 
   let rows = sql.prepare(`SELECT * FROM profile WHERE UserID = '${target.id}'`).get()
 
-    if(!rows) return message.reply("**:x: | حاول مرة أخرى**").then(msg => {msg.delete(5000)});
+
   
 
   let curxp = rows.xp;
@@ -19,10 +19,10 @@ module.exports.run = async (bot, message, args, sql) => {
   .setAuthor(message.author.username)
   .setColor("RANDOM")
   .addField("- LEVEL :", curlvl, true)
-  .addField("- XP :", curxp, true)
+  .addField("- XP ... :", curxp, true)
   .setFooter(`${difference} XP til level up.`, message.author.displayAvatarURL);
 
-  message.channel.send(lvlEmbed).then(msg => {msg.delete(5000)});
+  message.channel.send(lvlEmbed);
 
 }
 
