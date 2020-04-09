@@ -52,10 +52,10 @@ module.exports.run = async (bot, message, args, sql) => {
             let difference = nxtLvlXp - curxp;
             if (currep >= 0) {
                 color = '#008000'
-                arrow = '↑'
+                arrow = '+'
             } else {
                 color = '#FF0000'
-                arrow = '↓'
+                arrow = '-'
             }
             let words = []
             let ad = ''
@@ -187,10 +187,10 @@ module.exports.run = async (bot, message, args, sql) => {
             let difference = nxtLvlXp - curxp;
             if (currep >= 0) {
                 color = '#FFFFFF'
-                arrow = '↑'
+                arrow = '+'
             } else {
                 color = '#FFFFFF'
-                arrow = '↓'
+                arrow = '-'
             }
             let words = []
             let ad = ''
@@ -228,7 +228,7 @@ module.exports.run = async (bot, message, args, sql) => {
 
                     let ava = new Image;
                     ava.src = buf;
-                    ctx.drawImage(ava, 155, 72, 91, 91);
+                    ctx.drawImage(ava, 180, 72, 91, 91);
 
                     ctx.font = '12px Arial';
                     ctx.fontSize = '12px';
@@ -241,7 +241,7 @@ module.exports.run = async (bot, message, args, sql) => {
                     ctx.fontSize = '23px';
                     ctx.fillStyle = "#FFFFFF";
                     ctx.textAlign = "right";
-                    ctx.fillText(message.author.username, 250, 225);
+                    ctx.fillText(`Name : ${message.author.username}`, 249, 226);
                     ctx.font = '16px Arial';
                     ctx.fontSize = '16px';
                     ctx.fillStyle = "#FFFFFF";
@@ -256,7 +256,7 @@ module.exports.run = async (bot, message, args, sql) => {
                     ctx.fontSize = '12px';
                     ctx.fillStyle = "#FFFFFF";
                     ctx.textAlign = "center";
-                    ctx.fillText(`TOTAL EXP : ${curxp}`, 200, 362);
+                    ctx.fillText(`TOTAL XP : ${curxp}`, 200, 362);
                     ctx.font = '20px Arial';
                     ctx.fontSize = '20px';
                     ctx.fillStyle = "#FFFFFF";
@@ -271,7 +271,7 @@ module.exports.run = async (bot, message, args, sql) => {
                     ctx.fontSize = '32px';
                     ctx.fillStyle = "#FFFFFF";
                     ctx.textAlign = "center";
-                    ctx.fillText(`♥${curlikes}`, 199, 195);
+                    ctx.fillText(`☆ ${curlikes}`, 197, 198);
                     ctx.font = '32px Arial';
                     ctx.fontSize = '32px';
                     ctx.fillStyle = color;
